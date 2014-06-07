@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Docman - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo".\Debug/Docman.res" /d "_DEBUG" /d "_AFXDLL" "C:\ObjectARX 2000\samples\docman\Docman.rc"" 
+Creating temporary file "C:\TEMP\RSP28.tmp" with contents
+[
+/nologo /MD /W3 /WX /Gm /GX /Zi /Od /I "..\..\inc" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "ACRXAPP" /D "_WINDLL" /D "_AFXDLL" /D "ARXSAMPLE" /FR".\Debug/" /Fo".\Debug/" /Fd".\Debug/" /FD /c 
+"C:\ObjectARX 2000\samples\docman\common.cpp"
+"C:\ObjectARX 2000\samples\docman\docman.cpp"
+"C:\ObjectARX 2000\samples\docman\MDITestDialog.cpp"
+]
+Creating command line "cl.exe @C:\TEMP\RSP28.tmp" 
+Creating temporary file "C:\TEMP\RSP29.tmp" with contents
+[
+rxapi.lib acad.lib acrx15.lib acedapi.lib acutil15.lib /nologo /subsystem:windows /dll /incremental:no /pdb:".\Debug/Docman.pdb" /debug /machine:I386 /def:"docman.def" /out:"Docman.arx" /implib:".\Debug/Docman.lib" /pdbtype:sept /libpath:"..\..\lib" 
+".\Debug\common.obj"
+".\Debug\docman.obj"
+".\Debug\MDITestDialog.obj"
+".\Debug\Docman.res"
+]
+Creating command line "link.exe @C:\TEMP\RSP29.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+common.cpp
+docman.cpp
+MDITestDialog.cpp
+Generating Code...
+Linking...
+   Creating library .\Debug/Docman.lib and object .\Debug/Docman.exp
+
+
+
+<h3>Results</h3>
+Docman.arx - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
