@@ -1,0 +1,7 @@
+LIBRARY      notfsamp
+DESCRIPTION  'Arx Notification Test Program'
+
+EXPORTS
+	acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

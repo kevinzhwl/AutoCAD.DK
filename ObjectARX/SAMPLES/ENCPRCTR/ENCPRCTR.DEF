@@ -1,0 +1,7 @@
+LIBRARY      encprctr
+DESCRIPTION  'encapsulated reactor sample'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

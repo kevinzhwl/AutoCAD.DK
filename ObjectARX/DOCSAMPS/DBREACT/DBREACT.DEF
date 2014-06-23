@@ -1,0 +1,7 @@
+LIBRARY      dbreact
+DESCRIPTION  'Rx sample application - dbreact'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

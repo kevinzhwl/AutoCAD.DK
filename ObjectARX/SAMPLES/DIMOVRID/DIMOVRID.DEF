@@ -1,0 +1,7 @@
+LIBRARY      dimovrid
+DESCRIPTION  'Rx sample - Dimension overrides'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

@@ -1,0 +1,28 @@
+
+LAB 5: Database and AutoCAD Editor Reactors
+
+Purpose:
+
+ The purpose of this lab is to introduce the concept of AcDbDatabaseReactor
+ which can be used to keep track of changes occurring to entities in a
+ database. In this lab, you will learn how to attach a reactor to a 
+ database to receive notification each time an entity changes.
+
+ This lab also demonstrates how to create and use an AcEditor reactor
+ to monitor AutoCAD editor events.
+
+Lab Exercises:
+
+ Find the "//..." comments in the .cpp files and follow directions to do
+ the following:
+
+ - If (dbmrOn) and the reactor named dbmr is NULL, create dbmr, and attach
+   it the current drawing.
+
+ - If (!dbmrOn) and dbmr is non-NULL, remove it from the current drawing,
+   delete it, and reset its value to NULL.
+
+Home Exercises:
+
+ - Add an item to the dialog box to display a 3D point, then whenever the
+   modified entity is a kind of AcDbLine, display its first endpoint.

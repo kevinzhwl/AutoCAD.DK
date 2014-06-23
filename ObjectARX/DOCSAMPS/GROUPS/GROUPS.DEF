@@ -1,0 +1,7 @@
+LIBRARY      groups
+DESCRIPTION  'Rx sample application - groups'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

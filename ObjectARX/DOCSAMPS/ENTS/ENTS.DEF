@@ -1,0 +1,7 @@
+LIBRARY      ents
+DESCRIPTION  'ARX sample program - entity manipulation'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

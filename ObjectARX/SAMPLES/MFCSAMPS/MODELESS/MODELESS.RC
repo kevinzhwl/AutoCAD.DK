@@ -1,0 +1,74 @@
+//Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DbmodDlg DIALOG DISCARDABLE  0, 0, 117, 107
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Database modified"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDCLOSE,33,78,50,14
+    LTEXT           "Object",IDC_STATIC,6,2,23,8
+    LTEXT           "what?",IDC_WHAT,34,2,74,8
+    LTEXT           "Class:",IDC_STATIC,6,19,21,8
+    LTEXT           "Object Id:",IDC_STATIC,6,36,34,8
+    LTEXT           "Handle:",IDC_STATIC,7,52,24,8
+    EDITTEXT        IDC_EDIT_CLASS,43,17,68,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_OBJID,43,34,68,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HANDLE,43,51,68,13,ES_AUTOHSCROLL
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

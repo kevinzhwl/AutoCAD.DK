@@ -1,0 +1,7 @@
+LIBRARY      curve
+DESCRIPTION  'Rx sample application - curve'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

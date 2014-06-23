@@ -1,0 +1,7 @@
+DESCRIPTION 'Progress Bar Application'
+LIBRARY     progbar.arx
+
+EXPORTS     acrxEntryPoint
+            _SetacrxPtp
+	        acrxGetApiVersion
+

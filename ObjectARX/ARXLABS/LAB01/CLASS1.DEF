@@ -1,0 +1,6 @@
+DESCRIPTION 'Autodesk Class1 Rx sample application'
+LIBRARY     class1
+
+EXPORTS     acrxEntryPoint
+            _SetacrxPtp
+            acrxGetApiVersion

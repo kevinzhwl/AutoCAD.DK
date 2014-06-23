@@ -1,0 +1,38 @@
+
+LAB 3: Navigating through tables and records
+
+Purpose:
+
+The purpose of this lab is to introduce you to the concepts AcDbBlockTable,
+AcDbBlockTableRecord, and AcDbBlockTableRecordIterator. These concepts
+allow you to create block table records and give them names, and to
+retrieve and open block table records and iterate through them.
+
+Lab Exercises:
+
+ Find the "//..." comments in the .cpp files and follow directions to do
+ the following:
+
+ - Create a new block table record and set its name and block origin.
+
+ - Retrieve a block table from a current drawing database and open it for
+   write.
+ 
+ - Add a new block table record to the retrieved block table and close the
+   table.
+
+ - Append clones of selected entities to the new block table record.
+
+ - Open a block table for read and search for a block table record using
+   its name.
+
+ - Create a new table record iterator and use it to retrieve entities from
+   the block table record. 
+
+Home Exercises:
+
+ - Write options to erase or append entities to a block table record using
+   whatever criteria you like.
+  
+ - Erase all entities of or derived from class AcDbCircle from a block
+   using the AcRxObject::isKindOf() function.

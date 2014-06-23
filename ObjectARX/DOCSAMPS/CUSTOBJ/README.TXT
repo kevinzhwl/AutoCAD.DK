@@ -1,0 +1,12 @@
+
+Example on initialization functions in arx
+
+1.  Arxload custobj.arx
+2.  Command: create
+3.  Command: iterate
+4.  Command: arx (and then list the classes)
+    User must see AsdkMyClass in the class hierarchy
+5.  Command: arx (unload application)
+6.  Command: arx (then list the classes)
+    Class AsdkMyClass will be missing from the class hierarchy
+7.  Command: create (should say: Unknown command "CREATE".)

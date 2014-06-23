@@ -1,0 +1,7 @@
+LIBRARY      client
+DESCRIPTION  'Arx sample application - POLYSAMP'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

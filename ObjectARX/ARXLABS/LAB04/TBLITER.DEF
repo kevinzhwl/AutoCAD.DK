@@ -1,0 +1,6 @@
+DESCRIPTION 'Autodesk ARX sample application'
+LIBRARY     tbliter
+
+EXPORTS     acrxEntryPoint
+            _SetacrxPtp
+            acrxGetApiVersion

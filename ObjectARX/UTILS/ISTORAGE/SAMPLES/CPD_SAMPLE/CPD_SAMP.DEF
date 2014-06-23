@@ -1,0 +1,6 @@
+DESCRIPTION 'Autodesk ARX sample application'
+LIBRARY     cpd_samp
+
+EXPORTS     acrxEntryPoint
+            _SetacrxPtp
+            acrxGetApiVersion

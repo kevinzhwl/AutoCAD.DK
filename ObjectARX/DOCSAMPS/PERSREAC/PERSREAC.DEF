@@ -1,0 +1,7 @@
+LIBRARY      persreac
+DESCRIPTION  'Rx sample application - persreac'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

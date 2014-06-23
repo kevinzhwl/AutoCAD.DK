@@ -1,0 +1,7 @@
+LIBRARY      xtsndict
+DESCRIPTION  'Rx sample application - xtsndict'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

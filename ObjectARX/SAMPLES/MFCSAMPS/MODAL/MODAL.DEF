@@ -1,0 +1,6 @@
+DESCRIPTION 'ARX Modal Dialog Application'
+LIBRARY     modal
+
+EXPORTS     acrxEntryPoint
+            _SetacrxPtp
+            acrxGetApiVersion

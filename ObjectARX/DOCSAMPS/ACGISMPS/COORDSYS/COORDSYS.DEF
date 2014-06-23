@@ -1,0 +1,7 @@
+LIBRARY coordsys
+DESCRIPTION 'AcGi coordinate system conversions Test Program'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

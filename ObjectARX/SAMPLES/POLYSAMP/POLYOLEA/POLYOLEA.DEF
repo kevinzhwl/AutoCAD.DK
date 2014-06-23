@@ -1,0 +1,6 @@
+LIBRARY      polyolea
+DESCRIPTION  'Arx sample application - Polysamp w/ Automation support'
+
+EXPORTS
+  DllGetClassObject
+  DllCanUnloadNow

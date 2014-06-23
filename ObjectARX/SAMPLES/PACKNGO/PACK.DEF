@@ -1,0 +1,6 @@
+DESCRIPTION 'ARX Modal Dialog Application'
+LIBRARY     packngo
+
+EXPORTS     acrxEntryPoint
+            _SetacrxPtp
+

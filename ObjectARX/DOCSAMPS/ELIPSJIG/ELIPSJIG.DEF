@@ -1,0 +1,7 @@
+LIBRARY      elipsjig
+DESCRIPTION  'Rx sample application - elipsjig'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

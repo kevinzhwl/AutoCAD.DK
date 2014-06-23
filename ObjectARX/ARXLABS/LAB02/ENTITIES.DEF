@@ -1,0 +1,7 @@
+LIBRARY      entities
+DESCRIPTION  'Rx sample application - entities'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

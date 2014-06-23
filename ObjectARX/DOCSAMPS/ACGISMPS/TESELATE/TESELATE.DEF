@@ -1,0 +1,7 @@
+LIBRARY teselate
+DESCRIPTION 'AcGi PIX Test Program'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

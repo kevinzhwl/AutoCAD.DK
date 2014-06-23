@@ -1,0 +1,6 @@
+DESCRIPTION 'ESC Rx Template Application'
+LIBRARY     static
+
+EXPORTS     acrxEntryPoint
+            _SetacrxPtp
+

@@ -1,0 +1,7 @@
+LIBRARY mesh
+DESCRIPTION 'AcGi MESH Test Program'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

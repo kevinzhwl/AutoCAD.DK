@@ -1,0 +1,7 @@
+DESCRIPTION 'ESC Rx Template Application'
+LIBRARY     arxmdi.arx
+
+EXPORTS     acrxEntryPoint
+            _SetacrxPtp
+	    acrxGetApiVersion
+

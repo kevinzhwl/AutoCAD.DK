@@ -1,0 +1,25 @@
+
+LAB 4: Navigating through tables and records
+
+Purpose:
+
+The purpose of this lab is to introduce you to symbol table iterators.  You
+will be accessing the linetype table,  iterating through all it's records
+printing out each record's linetype name.
+
+Lab Exercises:
+
+ Find the "//..." comments in the .cpp file and follow directions to do
+ the following:
+ 
+ - get a pointer to the linetypetable.
+ 
+ - Create an iterator to walk the table from start to end.
+ 
+ - make a loop to iterate through the table opening each record,
+   accessing it's linetype name,  and printing it out using ads_printf().
+ 
+ - Don't forget to close each linetypeTableRecord in the loop.
+ 
+ - Once the loop is finished,  delete the iterator and close the linetype
+   table.

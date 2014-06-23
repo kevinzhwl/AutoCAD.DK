@@ -1,0 +1,365 @@
+// (C) Copyright 1996 by Autodesk, Inc. 
+//
+// Permission to use, copy, modify, and distribute this software in
+// object code form for any purpose and without fee is hereby granted, 
+// provided that the above copyright notice appears in all copies and 
+// that both that copyright notice and the limited warranty and
+// restricted rights notice below appear in all supporting 
+// documentation.
+//
+// AUTODESK PROVIDES THIS PROGRAM "AS IS" AND WITH ALL FAULTS. 
+// AUTODESK SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTY OF
+// MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE.  AUTODESK, INC. 
+// DOES NOT WARRANT THAT THE OPERATION OF THE PROGRAM WILL BE
+// UNINTERRUPTED OR ERROR FREE.
+//
+// Use, duplication, or disclosure by the U.S. Government is subject to 
+// restrictions set forth in FAR 52.227-19 (Commercial Computer
+// Software - Restricted Rights) and DFAR 252.227-7013(c)(1)(ii)
+// (Rights in Technical Data and Computer Software), as applicable.
+//
+// AsdkPoly.odl -- AsdkPoly sample type library
+
+ #include "polyenu.h"  // defines all the help id's
+
+[
+
+  uuid(A95D8AE0-E028-11cf-9B81-080009B133D5),
+  helpstring("AsdkPoly Sample 1.0 Type Library"),
+  helpfile("POLY.HLP"),
+  helpcontext(IDH_VB_REFERENCE),
+  lcid(0x0),
+  version(1.0)
+] 
+library AsdkPolySamp
+{
+  importlib("stdole32.tlb");
+
+  typedef [public] IDispatch* LPDISPATCH;
+  typedef [public] IUnknown* LPUNKNOWN;
+
+   [
+    uuid(64CED5D0-85A1-11d0-B1BF-080009DC322B),
+    helpstring("AsdkPoly Application dispatch interface"),
+    dual,
+    odl
+  ]  
+  interface IAsdkPolyApp : IDispatch
+  {
+
+	[
+//	  helpcontext(IDH_CREATEPOLY),
+	  helpstring("Create a poly.")
+	]
+	HRESULT CreatePoly();
+
+	[
+//	  helpcontext(IDH_CREATEDRAGPOLY),
+	  helpstring("Drag a poly.")
+	]
+	HRESULT CreateDragPoly();
+
+	[
+//	  helpcontext(IDH_ADDPOLY),
+	  helpstring("ADD a poly.")
+	]
+	HRESULT AddPoly([in] BSTR whichSpace, [in] BSTR bstrName, [in] int nSide, [in] SAFEARRAY(double) ptCenter, 
+				    [in] SAFEARRAY(double) ptStart,[out, retval] LPDISPATCH* pCopyObj );
+
+	[
+//	  helpcontext(IDH_POLYEDIT),
+	  helpstring("Edit a poly.")
+	]
+	HRESULT EditPoly();
+
+	[
+//	  helpcontext(IDH_TRANSACT),
+      helpstring("Poly Transaction.")
+	]
+	HRESULT TransactPoly();
+ 	
+    [
+//	  helpcontext(IDH_HILITPOLY),
+      helpstring("Highlight poly.")
+	]
+	HRESULT HilitPoly();
+
+ 	[
+//	  helpcontext(IDH_HILITSOLID),
+      helpstring("Highlight solid.")
+	]
+	HRESULT HilitSolid();
+
+  }
+
+
+  [
+    uuid(A95D8AE1-E028-11cf-9B81-080009B133D5),
+    helpstring("AsdkPoly dispatch interface"),
+    dual,
+    odl
+  ]  
+  interface IAsdkPoly : IDispatch
+  {
+    // Polygon object specific properties and methods
+    [
+      propget,
+      helpcontext(IDH_POLY_NUM_SIDES),
+      helpstring("Return and set the number of sides of the polygon.")
+    ]
+    HRESULT NumberOfSide([out, retval] int* nSide);
+    [
+      propput,
+      helpcontext(IDH_POLY_NUM_SIDES),
+      helpstring("Return and set the number of sides of the polygon.")
+    ]
+    HRESULT NumberOfSide([in] int nSide);
+
+    [
+      propget,
+      helpcontext(IDH_POLY_CENTER),
+      helpstring("Return and set the center of the polygon.")
+    ]
+    HRESULT Center([out, retval] SAFEARRAY(double)* ptCenter);
+    [
+      propput,
+      helpcontext(IDH_POLY_CENTER),
+      helpstring("Return and set the center of the polygon.")
+    ]
+    HRESULT Center([in] SAFEARRAY(double) ptCenter);
+
+    [
+      propget,
+      helpcontext(IDH_POLY_START),
+      helpstring("Return and set the start point of the polygon.")
+    ]
+    HRESULT StartPoint([out, retval] SAFEARRAY(double)* ptStart);
+    [
+      propput,
+      helpcontext(IDH_POLY_START),
+      helpstring("Return and set the start point of the polygon.")
+    ]
+    HRESULT StartPoint([in] SAFEARRAY(double) ptStart);
+
+    [
+      propget,
+      helpcontext(IDH_POLY_NORMAL),
+      helpstring("Return and set the normal vector of the polygon.")
+    ]
+    HRESULT Normal([out, retval] SAFEARRAY(double)* vNormal);
+    [
+      propput,
+      helpcontext(IDH_POLY_NORMAL),
+      helpstring("Return and set the normal vector of the polygon.")
+    ]
+    HRESULT Normal([in] SAFEARRAY(double) vNormal);
+
+    [
+      propget,
+      helpcontext(IDH_POLY_NAME),
+      helpstring("Return and set the name of the polygon.")
+    ]
+    HRESULT Name([out, retval] BSTR* bstrName);
+    [
+      propput,
+      helpcontext(IDH_POLY_NAME),
+      helpstring("Return and set the name of the polygon.")
+    ]
+    HRESULT Name([in] BSTR bstrName);
+
+
+	// initialization method
+	[
+      helpcontext(IDH_POLY_INITALL),
+	  helpstring("sets name, number of sides, center point and start point of polygon.")
+	]
+	HRESULT initializeAll([in] BSTR polyName, [in] int numberOfSides, [in] SAFEARRAY(double) centerPoint, [in] SAFEARRAY(double) startPoint);
+
+
+//////////////////////////added entity common properties
+
+	[
+	  propget,
+//	  helpcontext(IDH_ENTITY_NAME),
+	  helpstring("Return the class name of the entity object.")
+	]
+	HRESULT EntityName([out, retval] BSTR* className);
+
+	// Object attributes properties
+	[
+	  propget,
+//	  helpcontext(IDH_COLOR),
+	  helpstring("Return or set the color of the entity object.")
+	]
+	HRESULT Color([out, retval] int* colorNo);
+	[
+	  propput,
+//	  helpcontext(IDH_COLOR),
+	  helpstring("Return or set the color of the entity object.")
+	]
+	HRESULT Color([in] int colorNo);
+
+	[
+	  propget,
+//	  helpcontext(IDH_LAYER),
+	  helpstring("Return or set the layer of the entity object.")
+	]
+	HRESULT Layer([out, retval] BSTR* layerName);
+	[
+	  propput,
+//	  helpcontext(IDH_LAYER),
+	  helpstring("Return or set the layer of the entity object.")
+	]
+	HRESULT Layer([in] BSTR layerName);
+
+	[
+	  propget,
+//	  helpcontext(IDH_LINETYPE),
+	  helpstring("Return or set the linetype of the entity object.")
+	]
+	HRESULT Linetype([out, retval] BSTR* lineTypeName);
+	[
+	  propput,
+//	  helpcontext(IDH_LINETYPE),
+	  helpstring("Return or set the linetype of the entity object.")
+	]
+	HRESULT Linetype([in] BSTR lineTypeName);
+
+	[
+	  propget,
+//	  helpcontext(IDH_LINETYPE_SCALE),
+	  helpstring("Return or set the linetype scale of the entity object.")
+	]
+	HRESULT LinetypeScale([out, retval] double* ltScale);
+	[
+	  propput,
+//	  helpcontext(IDH_LINETYPE_SCALE),
+	  helpstring("Return or set the linetype scale of the entity object.")
+	]
+	HRESULT LinetypeScale([in] double ltScale);
+
+	// Visual properties
+	[
+	  propget,
+//	  helpcontext(IDH_VISIBLE),
+	  helpstring("Toggle to turn entity object visible on or off.")
+	]
+	HRESULT Visible([out, retval] boolean* bVisible);
+	[
+	  propput,
+//	  helpcontext(IDH_VISIBLE),
+	  helpstring("Toggle to turn entity object visible on or off.")
+	]
+	HRESULT Visible([in] boolean bVisible);
+
+	// Extended data
+	[
+//	  helpcontext(IDH_XDATA),
+	  helpstring("Get the extended data for the entity object.")
+	]
+	HRESULT GetXData([in] BSTR bstrName, [out] VARIANT* type, [out] VARIANT* data);
+
+	[
+//	  helpcontext(IDH_XDATA),
+	  helpstring("Set the extended data for the entity object.")
+	]
+	HRESULT SetXData([in] SAFEARRAY(short) type, [in] SAFEARRAY(VARIANT) data);
+
+	[
+//	  helpcontext(IDH_ARRAY_POLAR),
+	  helpstring("Creates an array of selected objects in a polar pattern.")
+	]
+	HRESULT ArrayPolar([in] int numOfObjects, [in] double angleToFill, [in] SAFEARRAY(double) basePoint,
+						 [out, retval] SAFEARRAY(LPDISPATCH)* pArrayObjs);
+
+	[
+//	  helpcontext(IDH_ARRAY_RECTANGULAR),
+	  helpstring("Creates an array of selected objects in a rectangular pattern.")
+	]
+	HRESULT ArrayRectangular([in] int numOfRows, [in] int numOfColumns, [in] int numOfLevels,
+							   [in] double rowSpacing, [in] double columnSpacing, [in] double levelSpacing,
+							   [out, retval] SAFEARRAY(LPDISPATCH)* pArrayObjs);
+
+	[
+//	  helpcontext(IDH_HIGHLIGHT),
+	  helpstring("Highlights the entity object.")
+	]
+	HRESULT Highlight([in] boolean bFlag);
+
+	// Copy/Erase methods
+	[
+//	  helpcontext(IDH_COPY),
+	  helpstring("Copies the entity object.")
+	]
+	HRESULT Copy([out, retval] LPDISPATCH* pCopyObj);
+
+	[
+//	  helpcontext(IDH_ERASE),
+	  helpstring("Erases the entity object.")
+	]
+	HRESULT Erase();
+
+	// Transformation methods
+	[
+	  helpstring("Moves the entity object from source to destination.")
+	]
+	HRESULT Move([in] SAFEARRAY(double) fromPoint, [in] SAFEARRAY(double) toPoint);
+
+	[
+//	  helpcontext(IDH_ROTATE),
+	  helpstring("Rotates the entity object about a point.")
+	]
+	HRESULT Rotate([in] SAFEARRAY(double) basePoint, [in] double rotationAngle);
+
+	[
+//	  helpcontext(IDH_ROTATE3D),
+	  helpstring("Rotates the entity object about a 3D line.")
+	]
+	HRESULT Rotate3d([in] SAFEARRAY(double) point1, [in] SAFEARRAY(double) point2, [in] double rotationAngle);
+
+	[
+//	  helpcontext(IDH_MIRROR),
+	  helpstring("Mirrors selected objects about a line or a plane.")
+	]
+	HRESULT Mirror([in] SAFEARRAY(double) point1, [in] SAFEARRAY(double) point2,
+					 [out, retval] LPDISPATCH* pMirrorObj);
+
+	[
+//	  helpcontext(IDH_MIRROR3D),
+	  helpstring("Mirrors selected objects about a plane.")
+	]
+	HRESULT Mirror3d([in] SAFEARRAY(double) point1, [in] SAFEARRAY(double) point2,
+					   [in] SAFEARRAY(double) point3, [out, retval] LPDISPATCH* pMirrorObj);
+
+	[
+//	  helpcontext(IDH_SCALE),
+	  helpstring("Scale the entity object with respect to the base point and the scale factor.")
+	]
+	HRESULT ScaleEntity([in] SAFEARRAY(double) basePoint, [in] double scaleFactor);
+
+	[
+//	  helpcontext(IDH_TRANSFORMBY),
+	  helpstring("Performs the specified transformation on the entity object.")
+	]
+	HRESULT TransformBy([in] SAFEARRAY(double) transformationMatrix);
+
+	[
+//	  helpcontext(IDH_UPDATE),
+	  helpstring("Update the graphics of the entity object.")
+	]
+	HRESULT Update();
+
+	[
+//	  helpcontext(IDH_GET_BOUNDING_BOX),
+	  helpstring("Return the min and max point of the bounding box of the entity object.")
+	]
+	HRESULT GetBoundingBox([out] VARIANT* minPoint, [out] VARIANT* maxPoint);
+
+	[
+	  helpstring("Intersects with the input entity object.")
+	]
+	HRESULT IntersectWith([in] LPDISPATCH pEntity, [in] int intersectOption, [out, retval] SAFEARRAY(double)* intersectionPoints);
+
+  }
+
+}

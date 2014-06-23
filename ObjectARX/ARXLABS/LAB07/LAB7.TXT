@@ -1,0 +1,35 @@
+
+LAB 7: Protocol Extension:  Entity Temperature
+
+Purpose:
+
+ The purpose of this lab is to explore the mechanics of using Protocol
+ Extension  to effectively add virtual functions to existing classes.
+
+ Study the makeup of the protocol extension class EntTemperature in
+ TEMPAPP.CPP, and implementations for AcDbCircle, AcDbRegion and a default
+ for AcDbEntity.  The value being computed is nonsensical, the point is the
+ class and object structure involved.
+
+Lab Exercises: 
+
+ - Add a call in the energy() function to execute the protocol extension
+   for the entity pointer passed to the energy function.
+
+ - In the initApp function,  fill in the necessary code to add the protocol
+   extension to AcDbEntity, AcDbRegion,  and AcDbCircle.
+
+ - In the unloadApp function,  add code to remove the protocol extension
+   from AcDbEntity, AcDbRegion,  and AcDbCircle.
+
+Optional:
+
+ - Create an implementation for AcDbEllipse.  There are comments
+   throughout the lab where you need to add code explaining what needs
+   to be added.
+
+Home Exercises:
+
+  Use Protocol Extension in conjunction with XDATA to store a scalar
+  floating point value on selected AcDbEntities.  At least two member
+  functions are needed: to set and retrieve the value.

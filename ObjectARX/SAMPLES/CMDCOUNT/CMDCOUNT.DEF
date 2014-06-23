@@ -1,0 +1,7 @@
+LIBRARY      cmdcount
+DESCRIPTION  'Arx Command Counter and Timer'
+
+EXPORTS
+	acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

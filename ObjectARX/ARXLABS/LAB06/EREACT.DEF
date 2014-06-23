@@ -1,0 +1,7 @@
+LIBRARY      ereact
+DESCRIPTION  'Rx sample application - Entity reactor'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

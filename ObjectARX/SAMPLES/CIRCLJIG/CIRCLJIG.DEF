@@ -1,0 +1,7 @@
+LIBRARY      circljig
+DESCRIPTION  'Rx sample application - circljig'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

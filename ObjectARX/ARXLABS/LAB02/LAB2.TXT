@@ -1,0 +1,36 @@
+
+LAB 2: Obtaining and manipulating an entity
+
+Purpose:
+
+ The purpose of this lab is to learn how you can create an AutoCad entity
+ and add it to the database. You will also learn how to obtain an entity's
+ id by selecting it and how to open it to obtain a pointer to it.  Once you
+ obtain a pointer to an entity, you can query it for its class, its DXF
+ name, its attribute values, etc. You can also change and manipulate its
+ attributes. 
+
+Lab Exercises:
+ 
+ Find the "//..." comments in the .cpp files and follow directions to do
+ the following:
+
+  - Set the endpoint of the line entity and any other attributes you wish
+    before you add the line entity to the database.
+
+  - Modify an endpoint of the selected line entity using the point values
+    acquired from the used via the function ads_getpoint().
+
+  - Set the center point and the radius of the circle entity and any other
+    attributes you wish before you add it to the database.
+
+  - Using the point acquired from the user via the function ads_getpoint(),
+    modify the center point of the selected circle entity.
+
+  - Locate and study the statement where the objects are being closed.
+
+Home Exercises:
+
+ Create and register commands to modify an object's linetype, layer, etc.
+
+ Create and register commands to acquire a different kind of entity.

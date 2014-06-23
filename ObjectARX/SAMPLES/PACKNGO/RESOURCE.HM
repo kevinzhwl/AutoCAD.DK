@@ -1,0 +1,16 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by Pack.rc
+//
+#define HIDBROWSE                       0x80810003
+#define HIDCANCEL                       0x80810002
+#define HIDCOPY                         0x808103ec
+#define HIDC_DEPENDLIST                 0x80810407
+#define HIDC_DEPENDTREE                 0x808103e8
+#define HIDC_PATH                       0x808103e9
+#define HIDC_REPORT                     0x809103fe
+#define HIDC_STATUS                     0x808103ee
+#define HIDC_SUBDIR                     0x80810403
+#define HIDC_TOGGLE_BUTTON_POSITION     0x80810461
+#define HIDREPORT                       0x80810005
+#define HIDREPORTPRINT                  0x80910400
+#define HIDSAVE                         0x80910404

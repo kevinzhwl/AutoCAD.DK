@@ -1,0 +1,7 @@
+LIBRARY      hilight
+DESCRIPTION  'Rx sample application - hilight'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

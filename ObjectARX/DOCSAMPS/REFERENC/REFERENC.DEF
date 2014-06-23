@@ -1,0 +1,7 @@
+LIBRARY      referenc
+DESCRIPTION  'Rx sample application - referenc'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

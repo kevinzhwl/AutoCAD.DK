@@ -1,0 +1,7 @@
+LIBRARY      blocks
+DESCRIPTION  'Rx sample application - blocks'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

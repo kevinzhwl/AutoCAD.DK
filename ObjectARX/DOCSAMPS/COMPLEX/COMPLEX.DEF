@@ -1,0 +1,7 @@
+LIBRARY      complex
+DESCRIPTION  'Rx sample program - complex entity manipulation'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

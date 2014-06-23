@@ -1,0 +1,7 @@
+LIBRARY      tbliter
+DESCRIPTION  'Rx sample application - tbliter'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

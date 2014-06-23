@@ -1,0 +1,17 @@
+; ObjectARX classes
+AcDbObjectId =id:<mId,X>
+AcGePoint3d =x=<x> y=<y> z=<z>
+AcGeVector3d =x=<x> y=<y> z=<z>
+AcGePoint2d =x=<x> y=<y>
+AcGeVector2d =x=<x> y=<y>
+AcRxObject =<,t>
+AcDbObject =<,t>
+AcDbEntity =<,t>
+AcDbObjectIdArray =count<mLogicalLen>
+AcDbDatabase =Imp*=<mpImpDb>
+AcDbObjectIterator =Imp*=<mpImpIterator>
+AcDbExtents =min(=<mMinPoint.x>,=<mMinPoint.y>,=<mMinPoint.z>) max=(<mMaxPoint.x>,<mMaxPoint.y>,<mMaxPoint.z>)
+AcDbPolylineBuffer =flags=<mFlags> alloc=<mNumPointsAllocated> used=<mNumPointsUsed>
+AcDbVoidPtrArray =physical=<mPhysicalLen> logical=<mLogicalLen>
+AcDbIdPair =key=<mKey.mId,X> value=<mValue.mId,X> 
+

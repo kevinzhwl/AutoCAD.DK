@@ -1,0 +1,6 @@
+DESCRIPTION 'ASISMP. Sample Rx Application'       
+LIBRARY     asismp        
+EXPORTS                  
+            acrxEntryPoint    
+            _SetacrxPtp       
+            acrxGetApiVersion 

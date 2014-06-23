@@ -1,0 +1,7 @@
+LIBRARY      xrecord
+DESCRIPTION  'Rx sample application - xrecord'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

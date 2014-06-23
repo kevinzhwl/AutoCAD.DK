@@ -1,0 +1,6 @@
+DESCRIPTION 'Rxwizard Rx application'
+LIBRARY     clonemsg
+
+EXPORTS     acrxEntryPoint
+            _SetacrxPtp
+            acrxGetApiVersion

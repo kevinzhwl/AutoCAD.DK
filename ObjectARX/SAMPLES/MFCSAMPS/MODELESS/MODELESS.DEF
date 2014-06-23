@@ -1,0 +1,7 @@
+LIBRARY      modeless
+DESCRIPTION  'ARx modeless dialog sample application'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

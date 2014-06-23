@@ -1,0 +1,9 @@
+LIBRARY       AsdkBodyApp
+DESCRIPTION  'ObjectARX Facet Modeler Test Application'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+	acrxGetApiVersion
+
+

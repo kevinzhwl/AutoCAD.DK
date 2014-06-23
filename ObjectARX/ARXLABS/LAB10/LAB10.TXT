@@ -1,0 +1,58 @@
+
+LAB 10: Adding Protocol Extension to a Custom Entity
+
+Purpose:
+
+ The purpose of this lab is to explore the mechanics of using Protocol
+ Extension  via an exported API to effectively add virtual functions to a
+ custom entity class.  For the entity class we will use the jblob entity 
+ created in lab09.
+
+Lab Exercises: 
+
+ - First you will need to open the tapivc4x.mak project file and build the
+   tempapi.lib static library based on source files in lab07.  This library
+   has the information necessary to resolve all references to the
+   EntTemperature class when linking the jblob.arx application.
+
+   For a more thorough explanation of the tempapi.lib mechanism see the
+   last section of this document.
+
+ - Now close the tapivc4x.mak project and open the lb10vc4x.mak project.
+
+ - In the lab07 subdirectory is the file TEMPAPP.CPP.  Study the makeup of
+   the protocol extension class EntTemprature in this file, as well as the
+   implementations for AcDbCircle, AcDbRegion and the default for
+   AcDbEntity.  The value being computed is nonsensical, the point is the
+   class and object structure involved.
+
+   Now take a look in MAIN.CPP in this (lab10) directory.  Find the "// ..."
+   comment and using the tempapp.cpp code as a model,  define a class for
+   a Protocol Extension object derived from EntTemprature that is to be
+   applied to instances of Jblob.
+
+NOTE:  In order to utilize the protocol extension added in this lab,  you
+       will need to load the lab07 TEMPAPP.ARX into AutoCAD since that ARX
+       program provides the necessary functionality to make the protocol
+       extension work.
+
+Home Exercises:
+
+ Use Protocol Extension in conjunction with XDATA to store a scalar
+ floating point value on selected AcDbEntities.  At least two member
+ functions are needed: to set and retrieve the value.  Explanation of
+ tempapi library mechanism:
+
+Further explanation of the API mechanism:
+
+ The source file tempapi.cpp implements the API class using the
+ ACRX_DEFINE_MEMBERS macro,  building the API library tempapi.lib. This
+ provides a complete EntTemperature class definition except for the
+ definition of the rxInit() function (it's declaration is provided in the
+ enttemp.h header file so even the API version of EntTemperature does have
+ it as part of it's signature).  The rxInit() function is a static member
+ function,  so it's definition does not need to be present in the API
+ static link library in order to be able to build derived classes.  But,
+ since the only definition for EntTemperature::rxInit() is in tempapp.arx, 
+ no classes derived from the API static link library can be used unless
+ tempapp.arx is already loaded.

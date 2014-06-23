@@ -1,0 +1,7 @@
+LIBRARY      chglyr
+DESCRIPTION  'Rx sample program - change layer'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

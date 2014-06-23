@@ -1,0 +1,7 @@
+LIBRARY      deepclon
+DESCRIPTION  'Rx sample program - deepCloneObjects() demonstration'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

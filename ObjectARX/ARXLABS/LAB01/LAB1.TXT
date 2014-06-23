@@ -1,0 +1,195 @@
+
+LAB 1: Introduction to ARX
+
+Purpose:
+
+ The purpose of this lab is to introduce you to the steps involved in
+ creating Rx dynamic linked libraries, defining Rx classes, and defining
+ and registering commands.    
+
+Lab Exercises:
+
+ Using the information supplied at the end of this document,  create a
+ project file for class1.cpp.  You will need to include the following
+ files in the project:
+
+  CLASS1.CPP
+  CLASS1.DEF
+  ACAD.LIB
+  ACEDAPI.LIB
+  RXAPI.LIB
+ 
+ - Examine the usage of acrxEntryPoint() in the .cpp files to initialize
+   the application, and study how classes and commands are registered.
+ 
+ - Load the compiled ARX DLL modules into an AutoCAD session using
+   ARX/LOAD command.
+
+ - Use ARX/Commands and ARX/Options/CLasses to list the registered
+   commands and classes.
+
+ - Build the program.
+
+ - Now use the information below to set up the debugger part of the
+   project.  Then try out the program under the debugger.  Experiment
+   with breakpoints and watches to see how it all works.
+ 
+ - Close the class1 project
+
+Home Exercises:
+
+ Study the header file rxdef.h to examine the other messages that can be
+ sent to an ARX application via the acrxEntryPoint function call.
+ 
+ Create an ARX application which contains ads_printf() statements to
+ implement the responses to the various messages described above. Place the
+ name of the application in the file acad.rx and observe the results of the
+ print statements to understand when the various messages are sent to the
+ application (Caution: kInitAppMsg may be sent before the display driver or
+ any drawing is loaded, and kUnloadAppMsg may be sent after the display
+ driver and drawings are unloaded. Make sure to load your ARX application
+ manually *after* the drawing editor has initialized if you want to see the
+ results of the print statements for these messages).
+
+MSVC++ IDE Project File & Debugger information (from readdev.txt file):
+
+
+Building ARX with the MSVC++ 4.2b IDE
+=====================================
+
+
+The first step in building an ARX application is to make a Project
+Workspace. The Project contains all the settings and files that are used
+to build the ARX application. ARX applications are Windows dynamic-linked
+libraries (DLL), and therefore you must choose the Dynamic-Link Library
+Project type (NOT using MFC) when creating the Project Workspace. A
+minimum application would consist of:
+
+NOTE: Unless your ARX program contains Windows specific code that requires
+      a .RC file, you will not need any .RC files.
+
+The basic steps to create a minimum project are:
+
+  1.  Start the Microsoft Visual C++ 4.2b Developer Studio. From the "File"
+      pulldown, select "New".
+
+  2.  Select "Project Workspace" in the dialog that appears.
+
+  3.  In the next dialog, enter your desired project name in the
+      appropriate edit box. Select "Dynamic-Link Library" as the project
+      type. Fill in the directory information as you desire. Then select
+      "Create".
+
+  4.  Next you will need to choose your files for the project. From the
+      "Insert"   pulldown, select "Files into Project." Select the source
+      (.C, .CPP, etc.), definition (.DEF), resource (.RC), and library
+      (.LIB) files to use in your project.
+
+      There are several ways to specify libraries to be used in the
+      project, but the simplest is to add them to the files listing for
+      the project. For a basix ARX program the minimum necessary ARX
+      libraries are RXAPI.LIB, ACAD.LIB.  If you are going to register
+      commands via the acedRegCmds->addCommand() function then the
+      ACEDAPI.LIB will also be necessary.
+ 
+ Now the Compiler values need to be set:
+
+  5.  In the "Build" pulldown, select "Settings" to bring up the "Project
+      Settings" dialog. Initially the "Settings for:" list box should 
+      have both "Win32 Debug" and "Win32 Release" highlighted so all
+      setting changes will apply to both.
+
+  6.  Select the "C/C++" tab to bring forward the compiler settings.
+  
+      Here are the categories and appropriate settings. Settings not shown
+      should be left as the default values. Other settings may work, but
+      these are the recommended values:
+ 
+        Code Generation
+          Use run-time library-> Multi-threaded (or Debug Multi-threaded
+              for debug build).  Using other settings may cause errors.
+ 
+       Preprocessor
+         Preprocessor Definitions-> Add "ACRXAPP, RADPACK" to the list.
+         Additional Include Directories -> Add in the \arx\inc directory
+             and others necessary to your project.
+   
+  NOTE: You may also add the arx\inc directory path to the general MSVC++
+        IDE include search paths and leave it out of "Additional Include
+        Directories" edit box.  This will then cause it to be searched for
+        all projects.
+        
+ Finally the Linker values need to be set:
+ 
+  7.  Select the "Link" tab to bring forward the linker settings. Settings
+      not listed should be left as the default values. Other settings may
+      work, but these have been tested:
+ 
+        General
+          Output File Name -> Enter the desired name. If you use an
+              extension other than .dll, MSVC++ 4.2b will use it. It is
+              recommended that you use the extension .ARX because this is
+              the default extension that AutoCAD will expect for ARX
+              applications.
+ 
+              NOTE: MSVC++ 4.2b may not automatically place an extension on
+                    the final DLL file. So, if you do not include an
+                    extension then there will be no extension on the final
+                    DLL file.
+          Output Base Address -> 0x1c000000
+          Entry-Point Symbol -> DllEntryPoint@12 
+ 
+  8.  Choose the OK button and the project is now complete and is ready to
+      be built into a Windows ARX program.
+      
+ Now all the settings have been made in order to build the application.
+ 
+Debugging ARX with the MSVC++ 4.2b IDE
+======================================
+ 
+ To debug an ARX session you need to start AutoCAD from the debug
+ environment. Here are the steps to set this up:
+ 
+   1.  From the "Build" pulldown choose "Settings."
+   2.  Select the "Debug" tab and enter the full path of your AutoCAD
+       executable in the "Executable for debug session" edit box. For
+       example: \R14\ACAD.EXE.
+
+   3.  In the "Working Directory" edit box you can set the path to the
+       directory you want to be current during the debugging session.
+
+   4.  In the "Program Arguments" edit box you can specify any AutoCAD
+       command line arguments (for example, a drawing file name and/or a
+       script file name or perhaps the /c argument with the location of
+       your acad.cfg and acad.ini files). When you are done, select "OK"
+       to close the dialog.
+
+   5.  Now set your breakpoints. To do this you need to have your source
+       in an edit window (use File/Open to access the necessary source
+       files). You then set the cursor on the line you want a breakpoint
+       and then use press the F9 key to set the breakpoint.
+
+   6.  Now, Use the "Go" option in the "Debug" pulldown to launch AutoCAD.
+       A dialog will appear informing you that ACAD.EXE doesn't contain
+       debug information and asking if you want to continue. You do, so
+       select "Yes".
+
+   7.  Once AutoCAD has fully initialized to its "Command:" prompt,  you
+       can (arxload "<myapp>") to load your application.
+
+       Note: If your ARX DLL has a file extension other than .arx then you
+             will need to specify the extension in the (ARXLOAD) function
+             call. For example, if your program is myapp.dll then you would
+             need to use     
+            
+                (arxload "myapp.dll")
+
+             to load the program in AutoCAD.
+
+ At this point, if you have no breakpoints in your program's initialization
+ code, AutoCAD should load your program and come back to the "Command:"
+ prompt. Now do whatever you normally would to execute your program. When
+ code execution reaches your program the MSVC++ IDE should come to the top
+ and you should be at your first breakpoint.
+
+ You can now set watches and do whatever else you wish for debugging.

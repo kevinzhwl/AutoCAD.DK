@@ -1,0 +1,7 @@
+LIBRARY      xdata
+DESCRIPTION  'Rx sample application - xdata'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

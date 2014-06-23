@@ -1,0 +1,330 @@
+# Microsoft Developer Studio Generated NMAKE File, Format Version 4.20
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (x86) Dynamic-Link Library" 0x0102
+
+!IF "$(CFG)" == ""
+CFG=Polysamp - Win32 Debug
+!MESSAGE No configuration specified.  Defaulting to Polysamp - Win32 Debug.
+!ENDIF 
+
+!IF "$(CFG)" != "Polysamp - Win32 Release" && "$(CFG)" !=\
+ "Polysamp - Win32 Debug"
+!MESSAGE Invalid configuration "$(CFG)" specified.
+!MESSAGE You can specify a configuration when running NMAKE on this makefile
+!MESSAGE by defining the macro CFG on the command line.  For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "POLYVC4X.MAK" CFG="Polysamp - Win32 Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "Polysamp - Win32 Release" (based on\
+ "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "Polysamp - Win32 Debug" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE 
+!ERROR An invalid configuration is specified.
+!ENDIF 
+
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+################################################################################
+# Begin Project
+# PROP Target_Last_Scanned "Polysamp - Win32 Debug"
+RSC=rc.exe
+CPP=cl.exe
+MTL=mktyplib.exe
+
+!IF  "$(CFG)" == "Polysamp - Win32 Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "WinRel"
+# PROP BASE Intermediate_Dir "WinRel"
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir ".\"
+# PROP Intermediate_Dir ".\"
+OUTDIR=.
+INTDIR=.
+
+ALL : "$(OUTDIR)\polysamp.arx"
+
+CLEAN : 
+	-@erase "$(INTDIR)\command.obj"
+	-@erase "$(INTDIR)\hilit.obj"
+	-@erase "$(INTDIR)\main.obj"
+	-@erase "$(INTDIR)\poly.obj"
+	-@erase "$(INTDIR)\polyjig.obj"
+	-@erase "$(INTDIR)\transact.obj"
+	-@erase "$(INTDIR)\util.obj"
+	-@erase "$(OUTDIR)\polysamp.arx"
+	-@erase "$(OUTDIR)\polysamp.exp"
+	-@erase "$(OUTDIR)\polysamp.lib"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+# ADD BASE CPP /nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /YX /c
+# ADD CPP /nologo /MD /W3 /GX /O2 /I "..\..\inc" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "ACRXAPP" /D "RADPACK" /D "POLYSAMP" /YX /c
+CPP_PROJ=/nologo /MD /W3 /GX /O2 /I "..\..\inc" /D "NDEBUG" /D "WIN32" /D\
+ "_WINDOWS" /D "ACRXAPP" /D "RADPACK" /D "POLYSAMP" /Fp"$(INTDIR)/POLYVC4X.pch"\
+ /YX /Fo"$(INTDIR)/" /c 
+CPP_OBJS=.\.\ 
+CPP_SBRS=.\.
+# ADD BASE MTL /nologo /D "NDEBUG" /win32
+# ADD MTL /nologo /D "NDEBUG" /win32
+MTL_PROJ=/nologo /D "NDEBUG" /win32 
+# ADD BASE RSC /l 0x409 /d "NDEBUG"
+# ADD RSC /l 0x409 /d "NDEBUG"
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/POLYVC4X.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+# ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /dll /machine:I386
+# ADD LINK32 ..\..\lib\acad.lib ..\..\lib\acedapi.lib ..\..\lib\acgiapi.lib ..\..\lib\libacge.lib ..\..\lib\rxapi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /base:0x1c000000 /entry:"DllEntryPoint@12" /subsystem:windows /dll /machine:I386 /nodefaultlib:"msvcrtd.lib" /out:".\polysamp.arx"
+LINK32_FLAGS=..\..\lib\acad.lib ..\..\lib\acedapi.lib ..\..\lib\acgiapi.lib\
+ ..\..\lib\libacge.lib ..\..\lib\rxapi.lib kernel32.lib user32.lib gdi32.lib\
+ winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib\
+ uuid.lib /nologo /base:0x1c000000 /entry:"DllEntryPoint@12" /subsystem:windows\
+ /dll /incremental:yes /pdb:"$(OUTDIR)/polysamp.pdb" /machine:I386\
+ /nodefaultlib:"msvcrtd.lib" /def:".\polysamp.def" /out:"$(OUTDIR)/polysamp.arx"\
+ /implib:"$(OUTDIR)/polysamp.lib" 
+DEF_FILE= \
+	".\polysamp.def"
+LINK32_OBJS= \
+	"$(INTDIR)\command.obj" \
+	"$(INTDIR)\hilit.obj" \
+	"$(INTDIR)\main.obj" \
+	"$(INTDIR)\poly.obj" \
+	"$(INTDIR)\polyjig.obj" \
+	"$(INTDIR)\transact.obj" \
+	"$(INTDIR)\util.obj"
+
+"$(OUTDIR)\polysamp.arx" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "Polysamp - Win32 Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "WinDebug"
+# PROP BASE Intermediate_Dir "WinDebug"
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir ".\"
+# PROP Intermediate_Dir ".\"
+OUTDIR=.
+INTDIR=.
+
+ALL : "$(OUTDIR)\polysamp.arx"
+
+CLEAN : 
+	-@erase "$(INTDIR)\command.obj"
+	-@erase "$(INTDIR)\hilit.obj"
+	-@erase "$(INTDIR)\main.obj"
+	-@erase "$(INTDIR)\poly.obj"
+	-@erase "$(INTDIR)\polyjig.obj"
+	-@erase "$(INTDIR)\transact.obj"
+	-@erase "$(INTDIR)\util.obj"
+	-@erase "$(INTDIR)\vc40.idb"
+	-@erase "$(INTDIR)\vc40.pdb"
+	-@erase "$(OUTDIR)\polysamp.arx"
+	-@erase "$(OUTDIR)\polysamp.exp"
+	-@erase "$(OUTDIR)\polysamp.lib"
+	-@erase "$(OUTDIR)\polysamp.ilk"
+	-@erase "$(OUTDIR)\polysamp.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+# ADD BASE CPP /nologo /MT /W3 /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /YX /c
+# ADD CPP /nologo /MD /W3 /Gm /GX /Zi /Od /I "..\..\inc" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "ACRXAPP" /D "RADPACK" /D "POLYSAMP" /YX /c
+CPP_PROJ=/nologo /MD /W3 /Gm /GX /Zi /Od /I "..\..\inc" /D "_DEBUG" /D "WIN32"\
+ /D "_WINDOWS" /D "ACRXAPP" /D "RADPACK" /D "POLYSAMP"\
+ /Fp"$(INTDIR)/POLYVC4X.pch" /YX /Fo"$(INTDIR)/" /Fd"$(INTDIR)/" /c 
+CPP_OBJS=.\.\ 
+CPP_SBRS=.\.
+# ADD BASE MTL /nologo /D "_DEBUG" /win32
+# ADD MTL /nologo /D "_DEBUG" /win32
+MTL_PROJ=/nologo /D "_DEBUG" /win32 
+# ADD BASE RSC /l 0x409 /d "_DEBUG"
+# ADD RSC /l 0x409 /d "_DEBUG"
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/POLYVC4X.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+# ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /dll /debug /machine:I386
+# ADD LINK32 ..\..\lib\acad.lib ..\..\lib\acedapi.lib ..\..\lib\acgiapi.lib ..\..\lib\libacge.lib ..\..\lib\rxapi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /base:0x1c000000 /entry:"DllEntryPoint@12" /subsystem:windows /dll /incremental:no /debug /machine:I386 /out:".\polysamp.arx"
+LINK32_FLAGS=..\..\lib\acad.lib ..\..\lib\acedapi.lib ..\..\lib\acgiapi.lib\
+ ..\..\lib\libacge.lib ..\..\lib\rxapi.lib kernel32.lib user32.lib gdi32.lib\
+ winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib\
+ uuid.lib /nologo /base:0x1c000000 /entry:"DllEntryPoint@12" /subsystem:windows\
+ /dll /incremental:yes /pdb:"$(OUTDIR)/polysamp.pdb" /debug /machine:I386\
+ /def:".\polysamp.def" /out:"$(OUTDIR)/polysamp.arx"\
+ /implib:"$(OUTDIR)/polysamp.lib" 
+DEF_FILE= \
+	".\polysamp.def"
+LINK32_OBJS= \
+	"$(INTDIR)\command.obj" \
+	"$(INTDIR)\hilit.obj" \
+	"$(INTDIR)\main.obj" \
+	"$(INTDIR)\poly.obj" \
+	"$(INTDIR)\polyjig.obj" \
+	"$(INTDIR)\transact.obj" \
+	"$(INTDIR)\util.obj"
+
+"$(OUTDIR)\polysamp.arx" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ENDIF 
+
+.c{$(CPP_OBJS)}.obj:
+   $(CPP) $(CPP_PROJ) $<  
+
+.cpp{$(CPP_OBJS)}.obj:
+   $(CPP) $(CPP_PROJ) $<  
+
+.cxx{$(CPP_OBJS)}.obj:
+   $(CPP) $(CPP_PROJ) $<  
+
+.c{$(CPP_SBRS)}.sbr:
+   $(CPP) $(CPP_PROJ) $<  
+
+.cpp{$(CPP_SBRS)}.sbr:
+   $(CPP) $(CPP_PROJ) $<  
+
+.cxx{$(CPP_SBRS)}.sbr:
+   $(CPP) $(CPP_PROJ) $<  
+
+################################################################################
+# Begin Target
+
+# Name "Polysamp - Win32 Release"
+# Name "Polysamp - Win32 Debug"
+
+!IF  "$(CFG)" == "Polysamp - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "Polysamp - Win32 Debug"
+
+!ENDIF 
+
+################################################################################
+# Begin Source File
+
+SOURCE=.\poly.cpp
+DEP_CPP_POLY_=\
+	".\poly.h"\
+	".\util.h"\
+	
+
+"$(INTDIR)\poly.obj" : $(SOURCE) $(DEP_CPP_POLY_) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\main.cpp
+DEP_CPP_MAIN_=\
+	".\command.h"\
+	".\poly.h"\
+	
+
+"$(INTDIR)\main.obj" : $(SOURCE) $(DEP_CPP_MAIN_) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\hilit.cpp
+DEP_CPP_HILIT=\
+	".\poly.h"\
+	".\util.h"\
+	
+
+"$(INTDIR)\hilit.obj" : $(SOURCE) $(DEP_CPP_HILIT) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\transact.cpp
+DEP_CPP_TRANS=\
+	".\poly.h"\
+	".\util.h"\
+	
+
+"$(INTDIR)\transact.obj" : $(SOURCE) $(DEP_CPP_TRANS) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\util.cpp
+DEP_CPP_UTIL_=\
+	".\poly.h"\
+	".\util.h"\
+	
+
+"$(INTDIR)\util.obj" : $(SOURCE) $(DEP_CPP_UTIL_) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\polyjig.cpp
+DEP_CPP_POLYJ=\
+	".\poly.h"\
+	".\polyjig.h"\
+	
+
+"$(INTDIR)\polyjig.obj" : $(SOURCE) $(DEP_CPP_POLYJ) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\command.cpp
+DEP_CPP_COMMA=\
+	".\poly.h"\
+	".\polyjig.h"\
+	".\util.h"\
+	
+
+"$(INTDIR)\command.obj" : $(SOURCE) $(DEP_CPP_COMMA) "$(INTDIR)"
+
+
+# End Source File
+################################################################################
+# Begin Source File
+
+SOURCE=.\polysamp.def
+
+!IF  "$(CFG)" == "Polysamp - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "Polysamp - Win32 Debug"
+
+!ENDIF 
+
+# End Source File
+# End Target
+# End Project
+################################################################################

@@ -1,0 +1,8 @@
+; arxdragdrop.def : Declares the module parameters for the DLL.
+
+LIBRARY      "dndInsert.arx"
+DESCRIPTION  'ARXDRAGDROP AutoCAD Dynamic Link Library'
+
+EXPORTS     acrxEntryPoint
+            _SetacrxPtp
+	        acrxGetApiVersion

@@ -1,0 +1,7 @@
+LIBRARY      fact.arx
+DESCRIPTION  'Autodesk Arx ADS Factorial Sample Program'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

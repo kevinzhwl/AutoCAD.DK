@@ -1,0 +1,8 @@
+LIBRARY      tempapp
+DESCRIPTION  'Rx Protocol Extension Test Program : Temperature ;-)'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion
+        energy

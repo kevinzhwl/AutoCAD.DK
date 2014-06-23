@@ -1,0 +1,7 @@
+LIBRARY      edinvent
+DESCRIPTION  'Rx Extension Dictionary Test Program : Inventory Id'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

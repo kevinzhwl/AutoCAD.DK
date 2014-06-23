@@ -1,0 +1,7 @@
+LIBRARY shell
+DESCRIPTION 'AcGi SHELL Test Program'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

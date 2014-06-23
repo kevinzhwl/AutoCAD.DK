@@ -1,0 +1,35 @@
+
+LAB 6: Entity reactors
+
+Purpose:
+
+ The purpose of Lab06 is to show the creation of persistent and
+ non-persistent object/entity reactors.
+
+Lab Exercises:
+ 
+ Find the "//..." comments in the .cpp file and follow directions to do
+ the following:
+ 
+ - In attachMessages(),  add code to the MsgReactor to the selected
+   entity and then close the entity.
+ 
+ - In createLines():
+
+   * Attach a newly created non-persistent reactor to a newly created
+     AcDbLine entity.
+
+   * Create and plant another instance on the other new AcDbLine.
+
+   * Don't forget to Close everything.
+
+ - In createPersistent(),  add code to attach a Jpreactor to the selected
+   entity.
+
+Home Exercises:
+
+ - Create a DXF file and see if you can find both the entity and the
+   persistent reactor in the DXF file.
+
+ - Rewrite createLines() to use persistent reactors, giving them names "A"
+   and "B" in the named object dictionary.  Beware of open conflicts.

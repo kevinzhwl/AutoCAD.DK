@@ -1,0 +1,7 @@
+LIBRARY      testdb
+DESCRIPTION  'Rx sample - read/write AcDbDatabase'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

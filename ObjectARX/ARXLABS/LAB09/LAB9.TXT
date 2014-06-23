@@ -1,0 +1,42 @@
+
+LAB 9: Custom Entity
+
+Purpose:
+
+ The purpose of this lab is to show what it takes to create a simple custom
+ entity -- JBLOB.  A JBLOB is a filled circle with a line protruding from
+ it like a lolipop.
+
+ The jblob entity class provides support to draw the entity,  read and
+ write to DWG and DXF,  explode,  list,  osnap (near,  end,  mid,  cen, 
+ quad),  grip editing (move and stretch),  and transformations like scale 
+ and move.
+
+ In addition,  Jblob shows how to properly implement the audit() member
+ function.  saveAs() is also implemented to show how to generate
+ different graphics for saveasr12 and proxy graphics save.
+
+ The JBLOB.ARX program will create JBLOB entities and add them to the
+ database.
+
+ There are two source files in this lab,  jblob.cpp and main.cpp.  The
+ main.cpp is complete as is.  
+
+ The jblob.cpp source file contains the code that defines the JBLOB entity
+ class.  Many of the methods for this class are incomplete and must be
+ filled in by you.
+
+Lab Exercises: 
+
+ In jblob.cpp look for the "// ..."  comments.  These indicate where there
+ is code missing that you must add in.
+
+ In many of these functions,  you can leave them as is and still build
+ and run the program.  This will allow you to complete a little,  test,
+ complete some more,  test, and so forth until it's all done.
+
+Home Exercises:
+
+ Try deriving JBLOB from AcDbCurve instead of AcDbEntity.  This will
+ involve a long list of new virtual functions to implement,  but the
+ JBLOB entity will be much more versatile.

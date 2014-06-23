@@ -1,0 +1,6 @@
+R14
+
+README
+======
+this is 16-bit sdk, there is unknow uncompatible BIG RISK.
+整个程序是16位的，有很大的兼容性问题

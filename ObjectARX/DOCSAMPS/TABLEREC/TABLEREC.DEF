@@ -1,0 +1,7 @@
+LIBRARY      tablerec
+DESCRIPTION  'Rx sample application - tablerec'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

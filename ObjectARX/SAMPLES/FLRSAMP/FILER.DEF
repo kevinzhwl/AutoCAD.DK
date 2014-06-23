@@ -1,0 +1,5 @@
+LIBRARY     filer
+DESCRIPTION   'Autodesk Rx test program for bug 19332'
+EXPORTS
+		acrxEntryPoint
+		_SetacrxPtp

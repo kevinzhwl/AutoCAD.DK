@@ -1,0 +1,7 @@
+LIBRARY viewgeom
+DESCRIPTION 'AcGi viewport geometry Test Program'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

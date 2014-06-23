@@ -1,0 +1,7 @@
+LIBRARY      clonreac
+DESCRIPTION  'Arx AcDb Library Test Program'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

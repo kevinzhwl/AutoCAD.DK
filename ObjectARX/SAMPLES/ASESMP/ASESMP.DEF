@@ -1,0 +1,7 @@
+LIBRARY      asesmp
+DESCRIPTION  'Arx Sample for ASE'
+
+EXPORTS
+	acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion

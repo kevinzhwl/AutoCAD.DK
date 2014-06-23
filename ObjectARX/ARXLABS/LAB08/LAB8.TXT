@@ -1,0 +1,39 @@
+
+LAB 8: Custom Objects
+
+Purpose:
+
+ The purpose of this lab is to show what it takes to create a simple custom
+ object (not an entity) -- MYCLASS.  A MYCLASS object is a simple object
+ that has only one data member to store an intger.  The myclass object
+ class provides support to read and write to DWG and DXF and to get and set
+ the integer data member.
+
+ The CREATE command in the program will create a dictionary, add it to the
+ named objects dictionary, and then create some objects of myclass and add
+ them to the new dictionary.
+
+ The ITERATE command will find the new dictionary and iterate over it
+ printing out the values of the integer data members of the myclass objects
+ stored within it.
+
+Lab Exercises: 
+
+ In samp2.cpp look for the "// ..."  comments.  These indicate where there
+ is code missing that you must add in.  The comments preceding the "//..."
+ will explain what's needed at that point.
+
+ Once done,  build and try.  
+
+Home Exercises:
+
+ Try elaborating the myclass class to have more data members of different
+ types.
+
+ Enhance the create_dictionary and iterate_dictionary functions to allow
+ more interactive creation and reporting.
+
+ Try adding objectId data members to the myclass class.  Keep in mind that
+ for dxfInFields(),  an objectId comes in as an ads_name so it must
+ be translated to an AcDbObjectId object using the global function
+ acdbGetObjectId() (see dbmain.h for it's signature).

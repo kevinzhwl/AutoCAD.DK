@@ -1,0 +1,414 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SEND DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "SEND\0"
+            VALUE "LegalCopyright", "Copyright © 1996\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SEND.DLL\0"
+            VALUE "ProductName", "SEND Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DEPEND_DLG DIALOGEX 0, 0, 335, 238
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pack & Go"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Copy",IDCOPY,275,5,50,14,0,0,HIDCOPY
+    PUSHBUTTON      "Cancel",IDCANCEL,275,22,50,14,0,0,HIDCANCEL
+    CONTROL         "Tree1",IDC_DEPENDTREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,5,30,255,145,0,HIDC_DEPENDTREE
+    EDITTEXT        IDC_PATH,60,197,180,12,ES_AUTOHSCROLL,0,HIDC_PATH
+    LTEXT           "Copy to :",IDC_STATIC,10,199,45,10
+    DEFPUSHBUTTON   "&Browse...",IDBROWSE,275,195,50,14,0,0,HIDBROWSE
+    PUSHBUTTON      "&Report",IDREPORT,275,45,50,14,0,0,HIDREPORT
+    CONTROL         "123456789012345678901234567890123456789012345678901234567890",
+                    IDC_STATUS,"Static",SS_LEFTNOWORDWRAP | SS_SUNKEN | 
+                    WS_GROUP,5,220,292,10,0,HIDC_STATUS
+    CONTROL         "Preserve Subdirectories",IDC_SUBDIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,180,230,10,0,HIDC_SUBDIR
+    CONTROL         "List2",IDC_DEPENDLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,5,30,255,145,0,HIDC_DEPENDLIST
+    CONTROL         "",IDC_TOGGLE_BUTTON_POSITION,"Static",SS_BLACKFRAME | 
+                    NOT WS_VISIBLE,7,7,9,9,0,HIDC_TOGGLE_BUTTON_POSITION
+END
+
+IDD_REPLACE DIALOG DISCARDABLE  0, 0, 305, 93
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Confirm File Replace"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDYES,40,75,50,14
+    PUSHBUTTON      "Yes to &All",IDYESALL,98,75,50,14
+    DEFPUSHBUTTON   "&No",IDNO,156,75,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,214,75,50,14
+    LTEXT           "Replace File:",IDC_STATIC,10,10,75,10
+    LTEXT           "c:\\acadr14\\sample\\myfile.dwg",IDC_FileE,100,5,195,10
+    LTEXT           "With File:",IDC_STATIC,10,45,75,10
+    LTEXT           "Mfile that is new",IDC_FileR,100,40,155,10
+    LTEXT           "Created Wednesday September 27 1995 12:00 AM 123456 Bytes",
+                    IDC_FileESize,100,15,200,20
+    LTEXT           "Created Wednesday September 27 1995 12:00 AM 123456 bytes",
+                    IDC_FileRSize,100,50,200,20
+END
+
+IDD_CREATEDIR DIALOG DISCARDABLE  0, 0, 265, 63
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Create Directory"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,208,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,208,24,50,14
+    LTEXT           "Directory",IDC_STATIC,15,10,155,10
+    LTEXT           "Mydrive:\\mydir\\newdir  ",IDC_DIRNAME,15,25,155,10
+    LTEXT           "Does not exist Create ?",IDC_STATIC,15,40,155,10
+END
+
+IDD_REPORT DIALOGEX 0, 0, 347, 265
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Report"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Save",IDSAVE,290,7,50,14,0,0,HIDSAVE
+    PUSHBUTTON      "Close",IDCANCEL,290,24,50,14,0,0,HIDCANCEL
+    EDITTEXT        IDC_REPORT,7,7,273,251,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_HSCROLL,0,HIDC_REPORT
+    PUSHBUTTON      "&Print",IDREPORTPRINT,290,50,50,14,0,0,HIDREPORTPRINT
+END
+
+IDD_SAVEDWG DIALOG DISCARDABLE  0, 0, 265, 88
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "PACK & GO"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDYES,77,70,50,14
+    PUSHBUTTON      "No",IDNO,138,70,50,14
+    CTEXT           "mydrwaing.thisdrawing.tata",IDC_DWGNAME,7,10,252,8
+    CTEXT           "Continue with coping files and dependencies?",IDC_MSG2,
+                    7,30,252,8
+    CTEXT           "recommend saving drawing now.",IDC_MSG1,7,20,252,8
+END
+
+DIRSELECT DIALOG DISCARDABLE  109, 35, 233, 134
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose Directory"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "File &Name:",stc3,236,0,76,10
+    EDITTEXT        edt1,236,10,90,12,ES_AUTOHSCROLL | ES_OEMCONVERT
+    LISTBOX         lst1,236,26,90,68,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Directories:",IDC_STATIC0,7,6,145,9
+    LTEXT           "",stc1,7,18,145,9,SS_NOPREFIX
+    LISTBOX         lst2,7,32,145,68,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "List Files of &Type:",stc2,236,98,90,9
+    COMBOBOX        cmb1,236,108,90,36,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Dri&ves:",stc4,7,104,145,9
+    COMBOBOX        cmb2,7,114,145,68,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,167,6,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,167,26,50,14,WS_GROUP
+    PUSHBUTTON      "&Help",psh15,167,46,50,14,WS_GROUP
+    CONTROL         "&Read Only",chx1,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,167,68,50,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DEPEND_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 328
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_REPLACE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_CREATEDIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_REPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 340
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_SAVEDWG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SENDICONS           BITMAP  DISCARDABLE     "pack.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELSEND ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            IDYESALL,               VIRTKEY, NOINVERT
+    "B",            IDBROWSE,               VIRTKEY, NOINVERT
+    "C",            IDCOPY,                 VIRTKEY, NOINVERT
+    "C",            IDCANCEL,               VIRTKEY, NOINVERT
+    "N",            IDNO,                   VIRTKEY, NOINVERT
+    "P",            IDREPORTPRINT,          VIRTKEY, NOINVERT
+    "R",            IDD_REPLACE,            VIRTKEY, NOINVERT
+    "Y",            IDYES,                  VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_XREF                "XREF"
+    IDS_IMAGE               "IMAGE"
+    IDS_FONTS               "FONTS"
+    IDS_MISCELANEOUS        "MISCELLANEOUS"
+    IDS_TOTAL_SIZE          "Total file size %ld Bytes"
+    IDS_ERR_RAS_DICT        "Error Opening Raster Dictionary... "
+    IDS_CANT_LOCATE         "\nCannot Locate %s"
+    IDS_ERROR_OPENING       "Error opening %s"
+    IDS_CREATE_ON           "Created  %s ,\n %ld\tBytes"
+    IDS_MODIFIED            "%s%s modified since last save"
+    IDS_CANT_CREATE         "Could not create\n %s"
+    IDS_COPYING_FILE        "Copying File %s%s"
+    IDS_COPY_CANCEL         "Copying files Canceled "
+    IDS_COPY_COMPLETE       "Copying files Complete"
+    IDS_EXTREF_REP1         "External References (Xref's)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_IMAGE_REP2          "Images"
+    IDS_FONTS_REP3          "Fonts"
+    IDS_MISC_REP4           "Miscellaneous"
+    IDS_CANT_LOCATE_REP5    "Program was unable to locate the following files"
+    IDS_NOTES_REP6          "Notes for distribution"
+    IDS_BAD_UNC             "%s\nPath does not exist.\nPlease verify the correct path was given."
+    IDS_DIR_FNAME_EXIST     "Cannot create directory. Specified name is already used by a file"
+    IDS_PATH_NOT_FOUND      "Path was not found"
+    IDS_SHX1_REP7           ".SHX fonts were found."
+    IDS_SHX2_REP8           "Please copy these fonts to the AutoCAD Fonts directory and"
+    IDS_SHX3_REP9           "check with the font manufacturer about distribution rights."
+    IDS_SHX4_REP10          "Fonts supplied with AutoCAD are freely distributable"
+    IDS_PFB1_REP11          ".PFB fonts were found."
+    IDS_PFB2_REP12          "These fonts are no longer supported by AutoCAD."
+    IDS_PFB3_REP13          "Register these with your system usiing Control Panel Fonts. (WinNT Only)"
+    IDS_PFB4_REP14          "To use equivalent fonts try setting your FONTMAP "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PFB5_REP15          "variable to acad.fmp (found in the AutoCAD support directory)"
+    IDS_PFB6_REP16          "or contact your font vendor for equivalent True Type Fonts"
+    IDS_PFB7_REP17          "Check with the font manufacturer about distribution rights."
+    IDS_PFB8_REP18          "Fonts supplied with AutoCAD are freely distributable."
+    IDS_PFB9_REP19          "blank string 1"
+    IDS_PFB10_REP20         "blank string 2"
+    IDS_TTF1_REP21          ".TTF fonts were found."
+    IDS_TTF2_REP22          "TTF fonts must be registered with the Operating System"
+    IDS_TTF3_REP23          "To register, select the Fonts option in your Control Panel"
+    IDS_TTF4_REP24          "Check with the font manufacturer about distribution rights."
+    IDS_TTF5_REP25          "Fonts supplied with AutoCAD are freely distributable."
+    IDS_TTF6_REP26          "blank string 1"
+    IDS_TTF7_REP27          "blank string 2"
+    IDS_MAP1_REP28          "The AutoCAD variable FONTMAP was set to %s"
+    IDS_MAP2_REP29          "Please make sure that you set the FONTMAP variable to read this file"
+    IDS_MAP3_REP30          "before opening any drawings."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MAP4_REP31          "blank string 1"
+    IDS_MAP5_REP32          "blank string 2"
+    IDS_ALT1_REP33          "The AutoCAD variable FONTALT was set to %s"
+    IDS_ALT2_REP34          "Please make sure that the FONTALT variable is set to this file"
+    IDS_ALT3_REP35          "before opening any drawings."
+    IDS_ALT4_REP36          "All text styles with missing fonts are automatically set to this font"
+    IDS_ALT5_REP37          "blank string 1"
+    IDS_ALT6_REP38          "blank string 2"
+    IDS_NOT_ENOUGH_DISK     "The destination disk is full.\n Please select another path."
+    IDS_CANNOT_GET_DISK     "Error getting free disk information on destination drive\n Please select another path."
+    LIST_FILENAME           "File Name"
+    LIST_FILESIZE           "Size"
+    LIST_FILEDATE           "Date"
+    LIST_VERSION            "DWG Version"
+    IDS_NO_MEM_TO_PRINT     "Insufficient memory to process Printing"
+    IDS_MEM_TO_SAVE         "Insufficient memory to Save file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_NO_PERMISSION_TO_WRITE "No write premission on target disk"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

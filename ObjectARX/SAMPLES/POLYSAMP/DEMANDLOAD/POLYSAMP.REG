@@ -1,0 +1,45 @@
+REGEDIT4
+;
+; Registry for Demand Loading PolySamp/PolyCAD
+;
+;
+; NOTE: Make sure the path in "MODULE" is updated to reflect the
+;       location of polysamp.arx in your environment.
+;
+;       Cut and paste Install ID "ACAD-ddddddd:tttttttt" from registry for the 
+;       particular installed AutoCAD. The Install ID is to allow multiple AutoCAD
+;       installation in one machine.
+;      
+;       For 3rd party developers, we recommend placing your application's registry 
+;       under your company name. For example, replacing  
+;       "\Autodesk\ObjectARX\2.0\SampleApps\PolySamp" with your company name.
+
+
+
+; AutoCAD registry section
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Autodesk\AutoCAD\R14.0\ACAD-ddddddd:tttttttt\Applications\AsdkPolyCAD]
+"LOADCTRLS"=dword:0000000d
+"REGPATH"="\\\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Autodesk\\ObjectARX\\2.0\\SampleApps\\PolySamp\\ACAD-ddddddd:tttttttt\\AsdkPolyCAD"
+
+
+; Application registry section
+
+; Used for command invocation
+[HKEY_LOCAL_MACHINE\SOFTWARE\Autodesk\ObjectARX\2.0\SampleApps\PolySamp\ACAD-ddddddd:tttttttt\AsdkPolyCAD\Groups]
+"ASDK_POLYGON"="ASDK_POLYGON"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Autodesk\ObjectARX\2.0\SampleApps\PolySamp\ACAD-ddddddd:tttttttt\AsdkPolyCAD\Commands]
+; Global : Local
+"ASDK_POLY"="POLY"
+"ASDK_DRAGPOLY"="DRAGPOLY"
+"ASDK_POLYEDIT"="POLYEDIT"
+
+; Application file location
+[HKEY_LOCAL_MACHINE\SOFTWARE\Autodesk\ObjectARX\2.0\SampleApps\PolySamp\ACAD-ddddddd:tttttttt\AsdkPolyCAD\Loader]
+"MODULE"="c:\\acadr14\\arx\\samples\\polysamp\\polysamp.arx"
+
+; Descriptive name and user friendly app name
+[HKEY_LOCAL_MACHINE\SOFTWARE\Autodesk\ObjectARX\2.0\SampleApps\PolySamp\ACAD-ddddddd:tttttttt\AsdkPolyCAD\Name]
+"Sample app to draw polygons"="PolyCAD from PolySamp Inc."
+

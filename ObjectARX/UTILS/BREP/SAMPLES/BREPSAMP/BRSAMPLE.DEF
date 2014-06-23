@@ -1,0 +1,14 @@
+;------------------------------------
+; BRSAMPLE.DEF module definition file
+;
+;------------------------------------
+
+LIBRARY			BRSAMPLE
+DESCRIPTION		'Autodesk Boundary Representation Library Sample Program'
+
+EXPORTS
+
+acrxGetApiVersion
+acrxEntryPoint
+_SetacrxPtp
+

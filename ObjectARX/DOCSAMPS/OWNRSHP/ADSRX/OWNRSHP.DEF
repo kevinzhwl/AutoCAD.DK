@@ -1,0 +1,7 @@
+LIBRARY      ownrshp
+DESCRIPTION  'Rx sample application - ownrshp'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

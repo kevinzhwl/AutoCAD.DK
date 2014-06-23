@@ -1,0 +1,7 @@
+LIBRARY      tempapp
+DESCRIPTION  'Rx sample application - tempapp'
+
+EXPORTS
+	acrxEntryPoint
+	_SetacrxPtp
+        acrxGetApiVersion

@@ -1,0 +1,7 @@
+LIBRARY stylcvrt
+DESCRIPTION 'AcGi subentityTraits Test Program'
+
+EXPORTS
+        acrxEntryPoint
+        _SetacrxPtp
+        acrxGetApiVersion
