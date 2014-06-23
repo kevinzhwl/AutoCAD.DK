@@ -1,0 +1,71 @@
+[prod.name]
+    ObjectARX 2.0
+
+[Hardware.Lock]
+    no
+
+[format]
+    cd
+
+[disks]
+  1 =.\, "CDROM"
+
+[group.sizes]
+  app.arx=52330496
+
+[components.Main]
+app.arx
+
+[app.arx]
+Typical
+Compact
+Custom
+Name="ObjectARX"
+Desc="Object ARX Samples and Documentation"
+1:DATA\arx.z,2,,,"arx.z"
+
+; The following section defines how icons are created at run-time.
+; It does not incorporate the uninstaller or any desktop icons created
+; for the Win95 shell.  
+;
+; The entry must be surrounded by quotes and the seventh parameter
+; is localizable.
+;
+; First parameter is the component, blank is unconditional. 
+;
+; Second is the name of the executable. % indicates root path
+;       Root svWinTarget is assumed.  Variable names need to be 
+;       incorporated for other directories we know of:
+;       % indicates that svWinTarget is prepended 
+;       %WINDIR%      Stirling's WINDIR
+;       %WINSYSDIR%   Stirling's WINSYSDIR
+;       %BROWSER%     Executable associated with HTML 
+;
+; Third is the parameter to append to second. % indicates root path 
+;       % indicates that svWinTarget is prepended
+;       %WINDIR%      Stirling's WINDIR
+;       %WINSYSDIR%   Stirling's WINSYSDIR 
+;       
+; Fourth is working directory. % indicates root path 
+;       Blank indicates svWinTarget (same as %)
+;       % indicates that svWinTarget is prepended 
+;       %WINDIR%      Stirling's WINDIR
+;       %WINSYSDIR%   Stirling's WINSYSDIR 
+;
+; Fifth is path to icon
+;       Blank indicates default
+;       % indicates that svWinTarget is prepended 
+;       %WINDIR%      Stirling's WINDIR
+;       %WINSYSDIR%   Stirling's WINSYSDIR 
+;       
+; Sixth is the icon index
+;       
+; Seventh is the resource string.  If it is numeric, it is converted
+;       from the resource library IUTIL.DLL at install time, other-
+;       wise it is picked up as a literal.  LOCALIZABLE
+;
+
+[icons]
+0="app.arx,winhlp32.exe,%\docs\readarx.hlp,,,0,ObjectARX Readme"
+1="app.arx,winhlp32.exe,%\docs\arxref.hlp,,,0,ObjectARX On-line Help"
+
